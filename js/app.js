@@ -49,21 +49,24 @@ window.addEventListener('DOMContentLoaded', () => {
         let imgWoman = document.createElement('img')
         imgWoman.classList.add('woman2')
         imgWoman.src = data.woman
-        imgWoman.alt = data.
+        imgWoman.alt = DATA.alt.woman
         container.appendChild(imgWoman)
         let imgBg = document.createElement('img')
         imgBg.classList.add('pattern2')
         imgBg.src = data.bg
+        imgBg.alt = DATA.alt.bg
         container.appendChild(imgBg)
     } else {
         let data = DATA.mobile
         let imgWoman = document.createElement('img')
         imgWoman.classList.add('woman')
         imgWoman.src = data.woman
+        imgWoman.alt = DATA.alt.woman
         container.appendChild(imgWoman)
         let imgBg = document.createElement('img')
         imgBg.classList.add('pattern')
         imgBg.src = data.bg
+        imgBg.alt = DATA.alt.bg
         container.appendChild(imgBg)
     }
        
