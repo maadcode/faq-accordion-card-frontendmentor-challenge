@@ -6,6 +6,10 @@ const DATA = {
     desktop: {
         "woman": "./images/illustration-woman-online-desktop.svg",
         "bg": "./images/bg-pattern-desktop.svg"
+    },
+    alt: {
+        "woman": "A girl watching a screen",
+        "bg": "Background for image girl"
     }
 }
 
@@ -45,6 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let imgWoman = document.createElement('img')
         imgWoman.classList.add('woman2')
         imgWoman.src = data.woman
+        imgWoman.alt = data.
         container.appendChild(imgWoman)
         let imgBg = document.createElement('img')
         imgBg.classList.add('pattern2')
@@ -55,10 +60,12 @@ window.addEventListener('DOMContentLoaded', () => {
         let imgWoman = document.createElement('img')
         imgWoman.classList.add('woman')
         imgWoman.src = data.woman
+        imgWoman.alt = DATA.alt.woman
         container.appendChild(imgWoman)
         let imgBg = document.createElement('img')
         imgBg.classList.add('pattern')
         imgBg.src = data.bg
+        imgBg.alt = DATA.alt.bg
         container.appendChild(imgBg)
     }
        
