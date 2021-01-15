@@ -19,16 +19,12 @@
 body {
     font-family: 'Kumbh Sans', sans-serif;
     width: 100vw;
-    height: auto;
+    height: 100%;
     background: linear-gradient(180deg, var(--bg-violet) 0%, var(--bg-blue) 100%);
 }
 
-.box {
-    display: none;
-}
-
 .card {
-    margin: 10rem auto 3rem;
+    margin: 10rem auto 5rem;
     background: #fff;
     width: 300px;
     max-width: 800px;
@@ -122,12 +118,22 @@ body {
 }
 
 @media screen and (min-width: 820px) {
+
     .card {
         display: grid;
         grid-template-columns: 1fr 1fr;
         width: 800px;
         padding: 0;
-        margin: 3rem auto;
+        position: relative;
+    }
+
+    .card::before {
+        content: url('../images/illustration-box-desktop.svg');
+        position: absolute;
+        top: 208px;
+        left: -93px;
+        z-index: 3;
+        animation: moving 4s linear infinite;
     }
 
     .container__img {
@@ -148,15 +154,6 @@ body {
         left: -580px;
         z-index: 1;
     }
-
-    .box {
-        display: block;
-        position: relative;
-        top: 438px;
-        left: 4.2%;
-        z-index: 3;
-        animation: moving 3s infinite linear;
-    }
     
     .container {
         margin: 2rem 3rem;
@@ -176,10 +173,10 @@ body {
 
 @keyframes moving {
     0%, 100% {
-        left: 4.2%;
+        left: -93px;
     }
 
     50% {
-        left: 1%;
+        left: -130px;
     }
 }
