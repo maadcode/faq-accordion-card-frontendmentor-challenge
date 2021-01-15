@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --clr-blue: hsl(238, 29%, 16%);
+    --clr-red: hsl(14, 88%, 65%);
+
+    --clr-very-dark: hsl(237, 12%, 33%);
+    --clr-dark: hsl(240, 6%, 50%);
+
+    --bg-violet: hsl(273, 75%, 66%);
+    --bg-blue: hsl(240, 73%, 65%);
+
+    --clr-dividers: hsl(240, 5%, 91%);
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    width: 100vw;
+    height: auto;
+    background: linear-gradient(180deg, var(--bg-violet) 0%, var(--bg-blue) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    background: #fff;
+    width: 300px;
+    max-width: 800px;
+    border-radius: 15px;
+    padding: 1.5rem 0;
+    position: relative;
+}
+
+.woman {
+    position: absolute;
+    top: -107px;
+    right: 30px;
+}
+
+.pattern {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+}
+
+.title {
+    text-align: center;
+    font-weight: var(--fw-bold);
+    font-size: 32px;
+    color: var(--clr-blue);
+    margin-top: 5rem;
+}
+
+.accordion {
+    max-width: 800px;
+}
+  
+.accordion__item {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+  
+.accordion__item--title {
+    border-bottom: 1px solid var(--clr-dividers);
+    color: var(--clr-very-dark);
+    font-weight: var(--fw-regular);
+    cursor: pointer;
+    position: relative;
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+.accordion__item--title:hover {
+    color: var(--clr-red);
+}
+
+.accordion__item.active .accordion__item--title {
+    font-weight: var(--fw-bold);
+}
+  
+.accordion__item--title::before {
+    content: url('../images/icon-arrow-down.svg');
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordion__item.active .accordion__item--title::before {
+    top: 15%;
+}
+  
+.accordion__item--content {
+    position: relative;
+    background: #fff;
+    height: 0;
+    transition: 0.5s;
+    overflow-y: auto;
+    color: var(--clr-dark);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+  
+.accordion__item.active .accordion__item--content {
+    height: 60px;
+    padding: 5px;
+}
+  
+.accordion__item.active .accordion__item--title::before {
+    transform: rotate(180deg);
+}
