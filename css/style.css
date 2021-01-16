@@ -117,12 +117,13 @@ body {
     transform: rotate(180deg);
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 600px) {
 
     .card {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 800px;
+        width: 80%;
+        max-width: 800px;
         padding: 0;
         position: relative;
     }
@@ -130,8 +131,8 @@ body {
     .card::before {
         content: url('../images/illustration-box-desktop.svg');
         position: absolute;
-        top: 208px;
-        left: -93px;
+        top: 217px;
+        left: -85px;
         z-index: 3;
         animation: moving 4s linear infinite;
     }
@@ -143,21 +144,22 @@ body {
 
     .woman2 {
         position: absolute;
-        top: 70px;
-        left: -80px;
+        width: 120%;
+        top: 30%;
+        left: -22%;
         z-index: 2;
     }
-
+    
     .pattern2 {
         position: absolute;
-        top: -295px;
-        left: -580px;
+        top: -42%;
+        left: -230%;
         z-index: 1;
     }
-    
+
     .container {
-        margin: 2rem 3rem;
-        padding: 1.5rem;
+        margin: 2rem;
+        padding: 1.5rem 0;
     }
 
     .title {
@@ -168,6 +170,24 @@ body {
     .accordion__item {
         width: 100%;
         margin: 0;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .card::before {
+        top: 206px;
+        left: -93px;
+    }
+
+    .woman2 {
+        top: 15%;
+        left: -22%;
+    }
+
+    .pattern2 {
+        position: absolute;
+        top: -57%;
+        left: -148%;
     }
 }
 

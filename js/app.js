@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const VIEWPORT_WIDTH = window.screen.width
     let container = document.querySelector('.container__img')
 
-    if(VIEWPORT_WIDTH >= 820) {
+    if(VIEWPORT_WIDTH > 600) {
         let data = DATA.desktop
         let imgWoman = document.createElement('img')
         imgWoman.classList.add('woman2')
