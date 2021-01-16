@@ -1,18 +1,3 @@
-const DATA = {
-    mobile: {
-        "woman": "./images/illustration-woman-online-mobile.svg",
-        "bg": "./images/bg-pattern-mobile.svg"
-    },
-    desktop: {
-        "woman": "./images/illustration-woman-online-desktop.svg",
-        "bg": "./images/bg-pattern-desktop.svg"
-    },
-    alt: {
-        "woman": "A girl watching a screen",
-        "bg": "Background for image girl"
-    }
-}
-
 class Accordion {
     constructor(selector, multiple) {
         this.accordion = document.querySelector(selector)
@@ -40,39 +25,7 @@ class Accordion {
     }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    const VIEWPORT_WIDTH = window.screen.width
-    let container = document.querySelector('.container__img')
-
-    if(VIEWPORT_WIDTH > 600) {
-        let data = DATA.desktop
-        let imgWoman = document.createElement('img')
-        imgWoman.classList.add('woman2')
-        imgWoman.src = data.woman
-        imgWoman.alt = DATA.alt.woman
-        container.appendChild(imgWoman)
-        let imgBg = document.createElement('img')
-        imgBg.classList.add('pattern2')
-        imgBg.src = data.bg
-        imgBg.alt = DATA.alt.bg
-        container.appendChild(imgBg)
-    } else {
-        let data = DATA.mobile
-        let imgWoman = document.createElement('img')
-        imgWoman.classList.add('woman')
-        imgWoman.src = data.woman
-        imgWoman.alt = DATA.alt.woman
-        container.appendChild(imgWoman)
-        let imgBg = document.createElement('img')
-        imgBg.classList.add('pattern')
-        imgBg.src = data.bg
-        imgBg.alt = DATA.alt.bg
-        container.appendChild(imgBg)
-    }
-       
-    (function() {
-        new Accordion('.accordion', false)
-    })()
-})
-
+(function() {
+    new Accordion('.accordion', false)
+})()
 
